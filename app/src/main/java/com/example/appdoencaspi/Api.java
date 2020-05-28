@@ -2,9 +2,7 @@ package com.example.appdoencaspi;
 
 public class Api {
 
-    private static final String ROOT_URL = "";
-
-    //Variáveis estáticas e globais para acesso os métodos no WEB Service
+    private static final String ROOT_URL = "http://192.168.0.11/DoencaApi/v1/Api.php?apicall=";
 
     public static final String URL_CREATE_DOENCAS = ROOT_URL + "createdoenca";
     public static final String URL_READ_DOENCAS = ROOT_URL + "getDoenca";
