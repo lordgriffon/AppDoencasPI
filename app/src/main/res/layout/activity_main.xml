@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -48,18 +49,19 @@
             android:id="@+id/btnAddUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="Cadastrar Doença"/>
+            android:text="Cadastrar Doença"
+            android:textAllCaps="false" />
+
+        <ListView
+            android:id="@+id/listViewDoencas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout" />
 
 
     </LinearLayout>
-    
-    <ListView
-        android:id="@+id/listViewDoencas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayout"
-        />
+
+
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -67,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 
-</RelativeLayout>
+</LinearLayout>

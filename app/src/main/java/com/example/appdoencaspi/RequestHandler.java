@@ -16,7 +16,7 @@ import javax.xml.transform.Result;
 
 public class RequestHandler {
 
-    public String sendPostRequest(String requestURL, HashMap<String,String> postDataParams){
+    public String sendPostRequest(String requestURL, HashMap<String, String> postDataParams) {
 
         URL url;
 
@@ -36,7 +36,7 @@ public class RequestHandler {
 
             OutputStream os = conn.getOutputStream();
 
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
 
             writer.write(getPostDataString(postDataParams));
 
@@ -45,17 +45,17 @@ public class RequestHandler {
             os.close();
             int responseCode = conn.getResponseCode();
 
-            if (responseCode == HttpURLConnection.HTTP_OK){
+            if (responseCode == HttpURLConnection.HTTP_OK) {
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 sb = new StringBuilder();
                 String response;
-                while ((response = br.readLine()) != null){
+                while ((response = br.readLine()) != null) {
                     sb.append(response);
                 }
             }
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return sb.toString();
@@ -64,16 +64,15 @@ public class RequestHandler {
     private String getPostDataString(HashMap<String, String> params) throws UnsupportedEncodingException {
         StringBuilder result = new StringBuilder();
         boolean first = true;
-        for(Map.Entry<String, String> entry : params.entrySet()){
-            if (first){
+        for (Map.Entry<String, String> entry : params.entrySet()) {
+            if (first) {
                 first = false;
-            }
-            else
+            } else
                 result.append("&");
 
-            result.append(URLEncoder.encode(entry.getKey(),"UTF-8"));
+            result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
             result.append("=");
-            result.append(URLEncoder.encode(entry.getValue(),"UTF-8"));
+            result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
         }
         return result.toString();
     }
