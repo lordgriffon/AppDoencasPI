@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Login_Activity extends AppCompatActivity {
+public class Cadastro_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_layout);
+        setContentView(R.layout.cadastro_layout);
     }
 
-    public void abrirCadastro(View view) {
-        Intent intent = new Intent(Login_Activity.this,Cadastro_Activity.class);
+    public void voltarLogin(View view) {
+        Intent intent = new Intent(Cadastro_Activity.this,Login_Activity.class);
         startActivity(intent);
     }
 }
