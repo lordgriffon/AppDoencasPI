@@ -8,4 +8,9 @@ public class Api {
     public static final String URL_READ_DOENCAS = ROOT_URL + "getDoenca";
     public static final String URL_UPDATE_DOENCAS = ROOT_URL + "updateDoenca";
     public static final String URL_DELETE_DOENCAS = ROOT_URL + "deleteDoenca&id=";
+
+    public static final String URL_CREATE_LOGIN = ROOT_URL + "createLogin";
+    public static final String URL_READ_LOGIN = ROOT_URL + "getLogin";
+    public static final String URL_UPDATE_LOGIN = ROOT_URL + "updateLogin";
+    public static final String URL_DELETE_LOGIN = ROOT_URL + "deleteLogin&id=";
 }
