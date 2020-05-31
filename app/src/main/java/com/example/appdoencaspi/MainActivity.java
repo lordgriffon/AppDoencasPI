@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")) {
                     Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
-                    refreshDoencaList(object.getJSONArray("heroes"));
+                    refreshDoencaList(object.getJSONArray("doencas"));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -232,9 +232,9 @@ public class MainActivity extends AppCompatActivity {
             this.doencaList = doencaList;
         }
 
-        @NonNull
+//        @NonNull
         @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = getLayoutInflater();
             View listViewItem = inflater.inflate(R.layout.layout_lista_doencas, null, true);
 
