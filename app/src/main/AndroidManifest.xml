@@ -13,11 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Doenca_Activity"></activity>
         <activity
             android:name=".Cadastro_Activity"
-            android:theme="@style/temaSemBarra">
-
-        </activity>
+            android:theme="@style/temaSemBarra"></activity>
         <activity
             android:name=".Login_Activity"
             android:theme="@style/temaSemBarra" />
@@ -32,7 +31,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

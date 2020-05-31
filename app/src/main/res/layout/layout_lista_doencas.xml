@@ -23,7 +23,7 @@
         android:padding="5dp"
         android:text="Alterar"
         android:textStyle="bold"
-        android:textColor="#f00"/>
+        android:textColor="#0f0"/>
 
     <TextView
         android:id="@+id/textViewDelete"
