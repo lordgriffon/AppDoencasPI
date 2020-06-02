@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
     ListView listView;
     Button buttonAddUpdate;
+    TextView textViewNome;
 
     List<Doenca> doencaList;
 
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         editTextNome = findViewById(R.id.editTextNome);
         editTextSintomas = findViewById(R.id.editTextSintomas);
         editTextPrevencao = findViewById(R.id.editTextPrevencao);
+        textViewNome = findViewById(R.id.textViewNome);
 
         progressBar = findViewById(R.id.progressBar);
         listView = findViewById(R.id.listViewDoencas);
@@ -72,6 +75,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+        textViewNome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Doenca.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         readDoenca();
     }
@@ -103,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void createDoenca() {
 
-        String id = editTextDoencaID.getText().toString();
         String nome = editTextNome.getText().toString();
         String sintomas = editTextSintomas.getText().toString();
         String prevencao = editTextPrevencao.getText().toString();
@@ -125,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         HashMap<String, String> params = new HashMap<>();
-        params.put("id", id);
         params.put("nome", nome);
         params.put("sintomas", sintomas);
         params.put("prevencao", prevencao);
