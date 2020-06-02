@@ -74,7 +74,7 @@ public class Cadastro_Activity extends AppCompatActivity {
 
     private void cadastrar(String login, String email, String senha) {
         HashMap<String, String> params = new HashMap<>();
-        params.put("login", login);
+        params.put("nomeLogin", login);
         params.put("email", email);
         params.put("senha", senha);
 

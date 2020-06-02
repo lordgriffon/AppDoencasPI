@@ -16,7 +16,14 @@
         <activity android:name=".Doenca_Activity" android:theme="@style/temaSemBarra"></activity>
         <activity
             android:name=".Cadastro_Activity"
-            android:theme="@style/temaSemBarra"></activity>
+            android:theme="@style/temaSemBarra">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".Login_Activity"
             android:theme="@style/temaSemBarra" />
@@ -26,11 +33,6 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/temaSemBarra">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

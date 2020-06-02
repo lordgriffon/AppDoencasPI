@@ -2,7 +2,7 @@ package com.example.appdoencaspi;
 
 public class Api {
 
-    private static final String ROOT_URL = "http://192.168.0.200/DoencaApi/v1/Api.php?apicall=";
+    private static final String ROOT_URL = "http://192.168.0.200/DoencasApi/v1/Api.php?apicall=";
 
     public static final String URL_CREATE_DOENCAS = ROOT_URL + "createDoenca";
     public static final String URL_READ_DOENCAS = ROOT_URL + "getDoenca";

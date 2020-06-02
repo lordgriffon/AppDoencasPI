@@ -76,17 +76,11 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-//        textViewNome.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(),Doenca.class);
-//                startActivity(intent);
-//            }
-//        });
 
 
 
         readDoenca();
+
     }
 
     private void refreshDoencaList(JSONArray doencas) throws JSONException {
