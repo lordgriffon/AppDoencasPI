@@ -18,4 +18,13 @@ public class Login_Activity extends AppCompatActivity {
         Intent intent = new Intent(Login_Activity.this,Cadastro_Activity.class);
         startActivity(intent);
     }
+
+    public void abrirAplicacao(View view) {
+        Intent intent = new Intent(Login_Activity.this,Login_Activity.class);
+        startActivity(intent);
+    }
+
+    public void fechar(View view) {
+        finish();
+    }
 }

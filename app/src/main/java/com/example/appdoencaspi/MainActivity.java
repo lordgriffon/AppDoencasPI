@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         editTextNome = findViewById(R.id.editTextNome);
         editTextSintomas = findViewById(R.id.editTextSintomas);
         editTextPrevencao = findViewById(R.id.editTextPrevencao);
-        textViewNome = findViewById(R.id.textViewNome);
+        textViewNome = findViewById(R.id.doencaNome);
 
         progressBar = findViewById(R.id.progressBar);
         listView = findViewById(R.id.listViewDoencas);
@@ -76,13 +76,13 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        textViewNome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Doenca.class);
-                startActivity(intent);
-            }
-        });
+//        textViewNome.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(),Doenca.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
 
@@ -196,7 +196,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateDoenca() {
 
-        String id = editTextDoencaID.getText().toString();
         String nome = editTextNome.getText().toString().trim();
         String sintomas = editTextSintomas.getText().toString().trim();
         String prevencao = editTextPrevencao.getText().toString().trim();
@@ -215,7 +214,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         HashMap<String, String> params = new HashMap<>();
-        params.put("id", id);
         params.put("nome", nome);
         params.put("sintomas", sintomas);
         params.put("prevencao", prevencao);
